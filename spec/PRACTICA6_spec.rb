@@ -53,7 +53,7 @@ describe "Practica6" do
 
 
     describe "DLS" do
-        
+        describe "Titulo & Porcentajes" do
         it "Debe de tener titulo" do
             expect(@new_dieta_dsl.get_titulo()).to eq("Almuerzo")
         end
@@ -65,6 +65,8 @@ describe "Practica6" do
         it "Debe de tener Porcentaje de dieta maximo" do
            expect(@new_dieta_dsl.get_por_dieta_max()).to eq("40") 
         end
+    end
+    describe "COMIDAS" do
         
         it "COMIDA -> Debe tener un n de Comidas" do
             expect(@new_dieta_dsl.get_n_platos()).to eq(2)
@@ -82,7 +84,8 @@ describe "Practica6" do
         it "COMIDA -> Debe tener un peso o cantidad recomendada" do
             expect(@new_dieta_dsl.get_Platos_peso(0)).to eq("200") 
         end
-        
+    end
+    describe "RESTO DE INFORMACION (Porcentajes & VCT)" do
         it "Debe de tener un VCT" do
             expect(@new_dieta_dsl.get_VCT()).to eq("785.9")
         end
@@ -98,7 +101,8 @@ describe "Practica6" do
         it "Debe de tener un Porcentaje de hidratos" do
            expect(@new_dieta_dsl.get_P_hidratos()).to eq("47") 
         end
-        
+    end
+    describe "DIETAS ESPECIALES (Por grupos/Por alimentos)" do
         it "DIETA EDADES -> Debe de tener un argumento edades" do
             expect(@dieta_dsl_edades.get_grupos_edades()).to eq("12 a 14 años")
         end
@@ -106,9 +110,12 @@ describe "Practica6" do
         it "DIETA ALIMENTOS -> Debe de tener un argumento alimentos" do
             expect(@dieta_dsl_alimentos.get_grupos_alimentos()).to eq("vegetariano")
         end
-        
+    end
+    describe "IMPRESION" do 
         it "Se imprime correctamente" do
+            puts
            @new_dieta_dsl.mostrar_dieta() 
         end
+    end
     end
 end
