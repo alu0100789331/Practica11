@@ -83,6 +83,14 @@ describe "Practica6" do
             expect(@new_dieta_dsl.get_Platos_peso(0)).to eq("200") 
         end
         
+        it "DIETA EDADES -> Debe de tener un argumento edades" do
+            expect(@dieta_dsl_edades.get_grupos_edades()).to eq("12 a 14 años")
+        end
+        
+        it "DIETA ALIMENTOS -> Debe de tener un argumento alimentos" do
+            expect(@dieta_dsl_alimentos.get_grupos_alimentos()).to eq("vegetariano")
+        end
+        
         it "Se imprime correctamente" do
            @new_dieta_dsl.mostrar_dieta() 
         end
