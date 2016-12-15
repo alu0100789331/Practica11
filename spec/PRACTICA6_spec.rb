@@ -40,7 +40,7 @@ describe "Practica6" do
             comida :descripcion_ => "Macarrones con salsa de tomate y queso parmesano",
                    :porcion_reco_ => "1 1/2 cucharon",
                    :peso_ => 200
-            comida :descripcion_ => "Escalope con ternera",
+            comida :descripcion_ => "Escalope con ternera (de tofu)",
                    :porcion_reco_ => "1 bistec mediano",
                    :peso_ => 200
             resto  :VCT =>785.9,
@@ -81,6 +81,22 @@ describe "Practica6" do
         
         it "COMIDA -> Debe tener un peso o cantidad recomendada" do
             expect(@new_dieta_dsl.get_Platos_peso(0)).to eq("200") 
+        end
+        
+        it "Debe de tener un VCT" do
+            expect(@new_dieta_dsl.get_VCT()).to eq("785.9")
+        end
+        
+        it "Debe de tener un Porcentaje de proteinas" do
+           expect(@new_dieta_dsl.get_P_proteinas()).to eq("19") 
+        end
+        
+        it "Debe de tener un Porcentaje de grasas" do
+           expect(@new_dieta_dsl.get_P_grasas()).to eq("34") 
+        end
+        
+        it "Debe de tener un Porcentaje de hidratos" do
+           expect(@new_dieta_dsl.get_P_hidratos()).to eq("47") 
         end
         
         it "DIETA EDADES -> Debe de tener un argumento edades" do
