@@ -88,6 +88,14 @@ class DSL_dieta
         @Por_dieta[1]
     end
     
+    def get_grupos_edades()
+        @edades
+    end
+    
+    def get_grupos_alimentos()
+        @alimentos
+    end
+    
     def get_Platos_descrip(numero)
         if(numero > @n_platos)
             puts "ERROR"
