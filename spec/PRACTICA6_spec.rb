@@ -34,6 +34,21 @@ describe "Practica6" do
                    :p_hidratos => 47
         end
         
+        @dieta_dsl_alimentos = DSL_dieta.new do
+            titulo "Almuerzo", :alimentos => "vegetariano"
+            por_dieta :min => 30, :max => 40
+            comida :descripcion_ => "Macarrones con salsa de tomate y queso parmesano",
+                   :porcion_reco_ => "1 1/2 cucharon",
+                   :peso_ => 200
+            comida :descripcion_ => "Escalope con ternera",
+                   :porcion_reco_ => "1 bistec mediano",
+                   :peso_ => 200
+            resto  :VCT =>785.9,
+                   :p_proteinas => 19 ,
+                   :p_grasas => 34,
+                   :p_hidratos => 47
+        end
+        
     end
 
 
